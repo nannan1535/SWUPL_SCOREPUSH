@@ -36,7 +36,6 @@ try:
     content = sorted_grades_new[0]["课程名称"] + " 成绩：" + sorted_grades_new[0]["成绩"] + "，任课老师：" + sorted_grades_new[0]["任课老师"] + "，成绩提交时间：" + sorted_grades_new[0]["成绩提交时间"]
 except:
     pushChange.push(0)
-    os.remove(input_filename_new)
     exit()
 
 # 对旧的JSON文件进行读取 
