@@ -31,7 +31,7 @@ def push(result, content="", summary=""):
         "content": content,
         "summary": summary,
         "contentType": 1,
-        "topicIds": topic_ids_list,
+        "topicIds": topic_ids_str,
         "uids": uids_str,
     }
 
