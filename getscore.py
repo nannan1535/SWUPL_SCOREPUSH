@@ -1,4 +1,4 @@
-import json
+import os
 import requests
 import secret
 def get_score():
@@ -10,7 +10,7 @@ def get_score():
         "Connection": "keep-alive",
         "Content-Length": "149",
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-        "Cookie": secret.Cookie,
+        "Cookie": os.environ.get('COOKIE'),
         "Host": "njwxt.swupl.edu.cn",
         "Origin": "https://njwxt.swupl.edu.cn",
         "Referer": "https://njwxt.swupl.edu.cn/jwglxt/cjcx/cjcx_cxDgXsxmcj.html?gnmkdm=N305007&layout=default",
