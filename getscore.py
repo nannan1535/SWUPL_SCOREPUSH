@@ -1,6 +1,5 @@
 import os
 import requests
-import secret
 def get_score():
     url = "https://njwxt.swupl.edu.cn/jwglxt/cjcx/cjcx_cxDgXscj.html?doType=query&gnmkdm=N305005"
     headers = {
