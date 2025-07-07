@@ -24,14 +24,6 @@ def push(result, content="", summary=""):
         print("[黑匣子记录] 致命错误：APPTOKEN 或 UIDS/TOPICIDS 未在环境中设置。无法推送。")
         return
 
-    # 2. 准备发送给 API 的 JSON 数据
-    try:
-        # 将字符串格式的 topicIds 和 uids 转换为列表
-        topic_ids_list = [int(tid.strip()) for tid in topic_ids_str.split(',') if tid]
-        uids_list = [uid.strip() for uid in uids_str.split(',') if uid]
-    except ValueError:
-        print("[黑匣子记录] 致命错误：TOPICIDS 格式不正确，应为以逗号分隔的数字。")
-        return
 
     url = "https://wxpusher.zjiecode.com/api/send/message"
     json_data = {
