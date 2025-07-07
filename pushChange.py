@@ -32,7 +32,7 @@ def push(result, content="", summary=""):
         "summary": summary,
         "contentType": 1,
         "topicIds": topic_ids_list,
-        "uids": uids_list,
+        "uids": uids_str,
     }
 
     print("[黑匣子记录] 准备发送给 wxpusher 的最终 JSON 数据如下:")
