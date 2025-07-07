@@ -1,6 +1,5 @@
 def push(result, content="",summary=""):
     import requests
-    import secret
     import os
     url = "https://wxpusher.zjiecode.com/api/send/message"
     app_token = os.environ.get('APPTOKEN')
