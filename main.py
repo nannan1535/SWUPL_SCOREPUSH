@@ -59,7 +59,7 @@ except: #如果旧成绩文件不存在或无法读取，则认为没有旧成�
     
 if sorted_grades_new[0]["成绩提交时间"] <= grades_data_old[0]["成绩提交时间"]:
         os.remove(input_filename_new)  # 删除新文件
-        pushChange.push(1,"成绩没有更新哦！","成绩没有更新哦！")
+        pushChange.push(0,"成绩没有更新哦！","成绩没有更新哦！")
         exit()
 else:
     pushChange.push(1,content,"有新成绩了！")
