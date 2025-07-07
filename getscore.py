@@ -29,4 +29,5 @@ def get_score():
         "queryModel.showCount": "100",}
     )
     data = response.json()
+    if not data print("不正常")
     return data
