@@ -24,8 +24,8 @@ def get_score():
     }
 
     response = requests.post(url, headers=headers, data={
-        "xnm": secret.xnm,
-        "xqm": secret.xqm,
+        "xnm": os.environ.get('XNM'),
+        "xqm": os.environ.get('XQM'),
         "queryModel.showCount": "100",}
     )
     data = response.json()
