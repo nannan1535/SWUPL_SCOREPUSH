@@ -1,6 +1,20 @@
-import os
 import requests
+# import secret
+import os
 def get_score():
+    COOKIE = os.environ.get('COOKIE')
+    XNM = os.environ.get('XNM')
+    XQM = os.environ.get('XQM')
+    
+    # COOKIE = secret.Cookie
+    # XNM = secret.xnm
+    # XQM = secret.xqm
+
+    data={
+        "xnm": XNM,
+        "xqm": XQM,
+        "queryModel.showCount": "100",}
+    
     url = "https://njwxt.swupl.edu.cn/jwglxt/cjcx/cjcx_cxDgXscj.html?doType=query&gnmkdm=N305005"
     headers = {
         "Accept": 'application/json, text/javascript, */*; q=0.01',
@@ -9,7 +23,7 @@ def get_score():
         "Connection": "keep-alive",
         "Content-Length": "149",
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-        "Cookie": os.environ.get('COOKIE'),
+        "Cookie": COOKIE,
         "Host": "njwxt.swupl.edu.cn",
         "Origin": "https://njwxt.swupl.edu.cn",
         "Referer": "https://njwxt.swupl.edu.cn/jwglxt/cjcx/cjcx_cxDgXsxmcj.html?gnmkdm=N305007&layout=default",
@@ -22,11 +36,7 @@ def get_score():
         "sec-ch-ua-mobile": "?0",
         "sec-ch-ua-platform": "Windows"
     }
-
-    response = requests.post(url, headers=headers, data={
-        "xnm": os.environ.get('XNM'),
-        "xqm": os.environ.get('XQM'),
-        "queryModel.showCount": "100",}
-    )
+    
+    response = requests.post(url, headers=headers, data=data,)
     data = response.json()
     return data
