@@ -2,7 +2,6 @@ name: Score Push Workflow
 
 on:
   schedule:
-    # 每10分钟运行一次
     - cron: '0 * * * *'
   workflow_dispatch: # 允许手动触发
 
