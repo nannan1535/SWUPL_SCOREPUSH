@@ -57,5 +57,5 @@ else:
 if scoreChange:
     writefile.writeFile('grades_json_old.json', jsonContent)
     pushChange.push(1, content, "有"+ str(changeNumber) +"门新成绩了！")
-print(scoreChange,changeNumber)
+print("是否更新",scoreChange,"更新门数",changeNumber)
 
