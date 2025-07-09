@@ -28,4 +28,9 @@ def push(result, content="",summary=""):
         "verifyPayType":0 
         }
     if result:
-        requests.post(url, json=json_data)
+        response  = requests.post(url, json=json_data)
+        response_data = response.json()
+        print("Wxpusher是否请求成功",response_data.get('success'), "Wxpusher返回内容",response_data.get('msg'))
+        print("请以是否受到通知为准")
+
+
