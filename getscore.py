@@ -37,6 +37,6 @@ def get_score():
         "sec-ch-ua-platform": "Windows"
     }
     
-    response = requests.post(url, headers=headers, data=data,)
+    response = requests.post(url, headers=headers, data=data,timeout=30)
     print("教务系统状态码:",response.status_code)
     return response.json()
