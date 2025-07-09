@@ -38,5 +38,5 @@ def get_score():
     }
     
     response = requests.post(url, headers=headers, data=data,)
-    data = response.json()
-    return data
+    print("教务系统状态码:",response.status_code)
+    return response.json()
