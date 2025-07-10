@@ -88,7 +88,8 @@
 * **`writefile.py`**: 负责将最新的成绩数据写入到 `grades_json_old.json` 文件中。
 * **`grades_json_old.json`**: 用于存储上一次查询到的成绩信息，以便于和新成绩进行对比。
 * **`.github/workflows/main.yml`**: GitHub Actions 的配置文件，定义了自动化的工作流程。
-
+* **`tutorial/`**: 存放教程图片。
+  
 ## ⚠️ 免责声明
 
 * 本项目仅供学习和交流使用，请勿用于非法用途。
